@@ -1,0 +1,373 @@
+.left {
+  position: fixed;
+  width: 50%;
+  height: 100%;/* ou 100vh */
+  padding: 3em 2em 1em;
+  background-image: url(../images/ilostmybody_v2.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left__title {
+  text-transform: uppercase;
+  font-size: 3em;
+  max-width: 100px;
+  line-height: 0.9;
+  padding-left: 95px;
+  background-image: url(../images/video.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 83px;
+  align-self: flex-start;
+  color: white;
+}
+
+.left__title-link,
+.left__title-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#trailer {
+  color: yellow;
+}
+
+#player {
+  display: none;
+}
+
+.left__paragraph {
+  font-size: 0.9em;
+  text-align: center;
+  padding: 1em 4% 1em 16%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 4px #333;
+}
+
+.left__subtitle {
+  font-style: bolder;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.left__subtitle-strong {
+  font-style: normal;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.left__nav {
+  list-style-type: none;
+  text-shadow: 0 0 4px #333;
+}
+
+.left__nav-item {
+  display: inline-block;
+}
+
+.left__nav-link {
+  color: white;
+  padding: 0.5em 1em;
+  margin: 0;
+  font-weight: 700;
+}
+
+.left__nav-link:hover {
+  color: inherit;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.4); /* 0.4 = transparence => 1=opaque, 0=transparent */
+  border-radius: 6px;
+}
+
+.nav-footer {
+  display: none;
+}
+
+/* RIGHT */
+.right {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.right__title {
+  padding: 0.5em 1em;
+  margin: 0;
+  color: aliceblue;
+  background-color: #333;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+}
+
+.post {
+  width: 50%;
+
+  color: white;
+
+  padding: 1.5em;
+  border: 1px solid #eaeaea;
+  border-left: none;
+  font-size: 1.1em;
+}
+
+.post--solo {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.post__meta {
+  font-size: 0.9em;
+  color: white;
+  margin: 0.625em 0;
+}
+
+.post__author-icon {
+  width: 1.4em;
+}
+
+.post__author {
+  color: white;
+  font-weight: 700;
+}
+
+.post__link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #dc5e53;
+}
+
+.post__link:hover {
+  text-decoration: none;
+}
+
+/* Modifiers sur les catégories */
+
+.post__category {
+  display: inline-block;
+  text-transform: uppercase;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 3px 6px;
+  background-color: yellow;
+  margin-bottom: 0.5em;
+}
+
+.post__category:hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+
+
+
+/* CONTACT */
+
+
+.form {
+  background-color: black;
+  color: yellow;
+  width: 50%;
+  margin-left: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.navbar-header {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: 0;
+  color: aliceblue;
+  background-color: #333;
+}
+
+.starter-template {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.form-group label {
+  padding: 8px;
+  margin-top: 0.8em;
+}
+
+.form-group input {
+  padding: 10px;
+}
+
+#inputservice {
+  width: 20%;
+  padding: 0.5em;
+}
+
+.form button {
+  background-color: yellow;
+  padding: 0.7em;
+  border-radius: 15px;
+  width: 20%;
+  margin: auto;
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+.form textarea {
+  height: 10em;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media(max-width: 1024px){
+  .left__title {
+    font-size: 2em;
+    background-size: 55px;
+    padding-left: 80px;
+  }
+
+  .left {
+    background-position: right;
+  }
+
+  #inputservice {
+    width: 28%;
+  }
+
+}
+
+
+
+@media(max-width: 768px){
+  .post {
+    width: 100%;
+  }
+
+  .left__subtitle-strong {
+  font-style: normal;
+  font-size: 1.4em;
+  font-weight: 600;
+  }
+
+  #inputservice {
+    width: 35%;
+  }
+
+  .form button {
+    width: 30%;
+  }
+}
+
+
+@media(max-width: 425px){
+  .left {
+    position: initial;
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-image: url(../images/ilostmybody_v2_dark.jpg);
+  }
+
+  .left__paragraph {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .right {
+    width: 100%; 
+    margin-left: 0%;
+  }
+
+  .right__title {
+    text-align: center;
+  }
+
+  #trailer {
+    display: none;
+  }
+
+  #player {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+
+  .left__subtitle-strong {
+    font-style: normal;
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+
+  .left__title {
+    margin: auto;
+    margin-right: 200px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .nav-footer {
+    display: block;
+  }
+
+  .left_footer_nav {
+    background-color: yellow;
+    text-shadow: none;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  .left_footer_nav a{
+    color: black;
+  }
+
+  .left_footer_nav-link {
+    list-style-type: none;
+    color: white;
+    padding: 0.5em 1em;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .form {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  #inputservice {
+    width: 45%;
+  }
+
+}
